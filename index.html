@@ -11,46 +11,21 @@
 </head>
 <body class="font-custom w-full h-full overflow-hidden p-5">
     <header>
-        <h1 class="text-2xl sm:text-4xl mb-3">Weather Dashboard</h1>
+        <h1 class="text-4xl sm:text-6xl mb-3">Weather Dashboard</h1>
     </header>
     <main class="">
-      <label class="flex flex-col gap-2 items-start mb-4">
-        <span class="text-lg">Find the weather for...</span>
+      <!-- input for city -->
+      <label class="flex flex-col gap-2 items-start mb-4 text-xl sm:text-2xl">
+        <span class="">Find the weather for...</span>
         <div class="flex items-stretch w-full">
-          <input id="city-input" type="text" class="form-input grow rounded-l" placeholder="City (,state,country)">
-          <a href='#weather-now' class="rounded-r bg-sky-700 text-white items-center text-lg px-4 flex" type="button" id="go">
+          <input id="city-input" type="text" class="form-input grow rounded-l" placeholder="Place">
+          <a href='#weather-now' class="rounded-r bg-sky-700 text-white items-center px-4 flex" type="button" id="go">
             <p>Go</p>
           </a>
         </div>
       </label>
       <hr>
-             
-           
-        <!-- main area with current weather and 5-day forecast -->
-            <!-- Current weather -->
-            <div id="weather-now" class="row">
-                <!-- city name, date, and icon -->
-                <p class="lead" id="date-el"></p>
-                <div class="d-flex align-items-center mb-3">
-                  <div class="d-flex align-items-end">
-                    <span class="display-3 mb-0" id="city-name"></span> 
-                    <span class="display-6 mb-1 mx-2" id="country-name"></span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <img id="weather-icon" src="" alt="">
-                  </div>
-                </div>
-                <!-- weather details -->
-                <div id="weather-details">
-                </div>
-            </div>
-            <hr id="hr-fore" class="invisible">
-            <p id="forecast-title" class="display-5"></p>
-            <div id="forecast" class="d-flex flex-wrap">
-              
-            </div>
-            <!-- 5-day forecast -->
-        </div>
+      <div></div>
         
     </main>
     <footer></footer>

@@ -19,7 +19,7 @@ var today = moment().format("MMM Do, YYYY");
 // show the error that that place does not exist when searching for place that does not exist in api
 function showError() {
     var alertEl = document.createElement("div");
-    alertEl.setAttribute("class", "alert alert-danger mt-3");
+    alertEl.setAttribute("class", "");
     alertEl.setAttribute("role", "alert");
     alertEl.textContent = "That's not a real place...";
     histCont.appendChild(alertEl);
@@ -208,8 +208,18 @@ btnGo.addEventListener("click", function () {
   } 
 });
 
+btnGo.addEventListener('keypress', function (event) {
+  if (event.key === 'Enter') {
+    const city = cityInput.value.trim();
+    if (city !== "") {
+      getCoords(city);
+      cityInput.value = "";
+    } 
+  }
+});
+
 // add event listener to clear history button so that local storage is cleared
-// btnClearHistory.addEventListener('click', function() {
-//     localStorage.clear()
-//     location.reload()
-// })
+btnClearHistory.addEventListener('click', function() {
+    localStorage.clear()
+    location.reload()
+})
