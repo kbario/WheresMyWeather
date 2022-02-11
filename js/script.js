@@ -46,18 +46,18 @@ function setHist(city) {
 }
 
 // get history from local storage or create new if none exists
-function getHist() {
-  var storedHist = JSON.parse(localStorage.getItem("hist"));
-  if (storedHist === null) {
-    var hist = [];
-    btnClearHistory.classList.add('invisible')
-    return hist;
-  } else {
-    var hist = storedHist;
-    btnClearHistory.classList.remove('invisible')
-    return hist;
-  }
-}
+// function getHist() {
+//   var storedHist = JSON.parse(localStorage.getItem("hist"));
+//   if (storedHist === null) {
+//     var hist = [];
+//     btnClearHistory.classList.add('invisible')
+//     return hist;
+//   } else {
+//     var hist = storedHist;
+//     btnClearHistory.classList.remove('invisible')
+//     return hist;
+//   }
+// }
 
 // render the history
 function renderHist(hist) {
@@ -75,14 +75,14 @@ function renderHist(hist) {
 }
 
 // function that gets everything in order
-function init() {
-  var hist = getHist();
-  renderHist(hist);
-  return hist;
-}
+// function init() {
+//   var hist = getHist();
+//   renderHist(hist);
+//   return hist;
+// }
 
-// run the start up function
-var hist = init();
+// // run the start up function
+// var hist = init();
 
 // render the name of the city
 function renderCity(city, country) {
@@ -209,7 +209,7 @@ btnGo.addEventListener("click", function () {
 });
 
 // add event listener to clear history button so that local storage is cleared
-btnClearHistory.addEventListener('click', function() {
-    localStorage.clear()
-    location.reload()
-})
+// btnClearHistory.addEventListener('click', function() {
+//     localStorage.clear()
+//     location.reload()
+// })
