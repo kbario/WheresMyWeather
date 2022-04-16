@@ -1,18 +1,11 @@
 module.exports = {
-  content: [
-    './index.html',
-    './css/dev.css',
-    './js/script.js',
-  ],
+  content: ["./index.html", "./css/*.css", "./js/*.js"],
   theme: {
     extend: {
       fontFamily: {
-        custom: ['Jost', 'sans-serif'],
+        custom: ["Jost", "sans-serif"],
       },
     },
   },
-  plugins: [
-  require('@tailwindcss/typography'),
-  require('@tailwindcss/forms'),
-],
-}
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+};
